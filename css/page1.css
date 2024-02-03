@@ -1,0 +1,79 @@
+:root{
+    --accent--color:rgba(60, 60, 60, 0.841);
+    --accent--bgcolor:rgba(207, 207, 207, 0.865);
+    --bg--color:rgba(244, 244, 244, 0.953);
+    --color:rgba(60, 60, 60, 0.841);
+}
+:root[dark_mode]{
+    --bg--color:rgb(51, 46, 46);
+    --color:rgba(236, 236, 236, 0.946);
+    --accent--bgcolor:rgba(91, 91, 91, 0.841);
+    --accent--color:rgba(244, 244, 244, 0.953);
+    --header--bg:rgba(114, 179, 190, 0.926);
+    --accent:rgba(135, 211, 126, 0.805);
+}
+form{
+    background-color: var(--accent--bgcolor);
+    color: var(--color);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    align-items: start;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid var(--accent--bgcolor);
+    border-radius: 2rem;
+    padding: 2.5vw;
+}
+
+form > div{
+    width: 100%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+form > div > input{
+    background-color: var(--accent--bgcolor);
+    padding:0.5rem;
+    border:1px solid var(--accent--color);
+    border-radius: 0.8rem;
+    color: var(--color);
+
+}
+
+form > div > input[type=submit]{
+    cursor: pointer;
+    margin-top:3em;
+    padding:0.6rem 2rem;
+    border-radius: 0.8em;
+    background-color: none;
+    border:1px solid var(--accent--color);
+    transition: 0.2s ease;
+}
+#gender_fieldset{
+    margin: 1rem;
+    padding: 0 1rem;
+    border-radius: 0.8em;
+    background-color: none;
+    border:none;
+    flex-direction: column; 
+    align-items: flex-start;
+}
+#gender_fieldset > div{
+    display:flex; 
+    justify-content:space-around; 
+}
+
+#gender_fieldset>div>div{
+    margin:0.5em;
+}
+form > div > input[type=submit]:hover{
+    background-color: var(--accent--color);
+    color:var(--accent--bgcolor);
+}

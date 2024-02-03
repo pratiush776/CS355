@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/page1.css">
+</head>
+<body onload="checkMode()">
+
+    <div class="header">
+        <h1 class="course">CS 355</h1>
+        <h1 class="name">Praitush Karki</h1>
+    </div>
+    
+    <!-- <span class="nav-right nav">
+        <a href="#"><img src="imgs/right.png" alt="Right"></a>
+    </span> -->
+    <span class="nav-left nav">
+        <a href="index.html"><img src="imgs/left.png" alt="Left"></a>
+    </span>
+
+    <span id="dark-mode">Dark Mode</span>
+    
+    <div class="content">
+        <p> This is <b>Page 1</b></p>
+
+        <form action="/page2.html" method="GET">
+            <label style="margin-bottom: 2rem; padding:1em; width: 100%; border-bottom: 1px solid;text-align: center;">Personal Information</label>
+            <div>
+                <label for="f_name">First Name</label>  
+                <input type="text" id="f_name" name="f_name" required>
+            </div>
+            <div>
+                <label for="l_name">Last Name</label>  
+                <input type="text" id="l_name" name="l_name" required>
+            </div>
+            <div>
+                <Label for="age">Age</Label>  
+                <input type="number" id="age" name="age" min="16">
+            </div>
+            <fieldset id="gender_fieldset">
+                <label>Gender </label> 
+                <div>
+                    <div>
+                        <input type="radio" name="gender" id="gender_m" value="Male"> 
+                        <label for="gender_m">Male</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="gender" id="gender_f" value="Female"> 
+                        <label for="gender_f">Female</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="gender" id="gender_o" value="Others">
+                        <label for="gender_o">Others</label>
+                    </div>
+                </div>
+            </fieldset>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div style="align-self: center;">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+<script src="js/script.js"></script>
+</html>
