@@ -1,4 +1,4 @@
-const $ = document.querySelector.bind(document);
+let $ = document.querySelector.bind(document);
 
 $('#dark-mode').addEventListener('click',toggleMode)
 

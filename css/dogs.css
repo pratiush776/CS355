@@ -1,0 +1,45 @@
+
+#search {
+    margin: 2em;
+    border: 1px solid var(--color);
+    width: 25vw;
+    margin-top: 5vh;
+    padding: 0.8em;
+    border-radius: 3em;
+    transition: 1s ease;
+}
+
+#search:active{
+    transform: scale(1.2);
+}
+#showImagesBtn{
+    margin: 2em;
+    padding: 0.5em 2em;
+    border: 1px solid var(--accent);
+    background-color: var(--accent);
+    border-radius: 3em;
+    color: var(--color);
+    transition: 0.1s ease;
+    box-shadow: 0.1em 0.1em 0.5em var(--color);
+}
+
+#showImagesBtn:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0.5em 0.5em 1em var(--color);
+}
+
+#showImagesBtn:active{
+    transform: scale(1.1);
+}
+
+#dogImage{
+    display: block;
+    border-radius: 2em;
+    box-shadow: 0.3em 0.3em 2em;
+    margin-top: 3em;
+    padding: 0.5em;
+    height: fit-content;
+    width: fit-content;
+    overflow: hidden;
+}

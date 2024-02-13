@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dogs.css">
+    <link rel="icon" type="image/x-icon" href="imgs/favicon/dogs.png">
+</head>
+<body onload="checkMode()">
+
+    <div class="header">
+        <h1 class="course">CS 355</h1>
+        <h1 class="name">Praitush Karki</h1>
+    </div>
+    
+    <!-- <span class="nav-right nav">
+        <a href="#"><img src="imgs/right.png" alt="Right"></a>
+    </span> -->
+    
+    <span class="nav-left nav">
+        <a href="page1.html"><img src="imgs/left.png" alt="Left"></a>
+    </span>
+
+    <span id="dark-mode">Dark Mode</span>
+    
+    <div class="content">
+        <input type="text" id="search" list="breedsList">
+        <datalist id="breedsList">
+
+        </datalist>
+        <button id="showImagesBtn">Find Image</button>
+
+        <div id="dog">
+            <img id="dogImage" src="" alt="No image found" style="display: none;">
+        </div>
+    </div>
+</body>
+<script src="js/script.js"></script>
+<script src="js/dogs.js"></script>
+</html>
