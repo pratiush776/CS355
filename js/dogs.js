@@ -19,9 +19,10 @@ let showImagesBtn = $('#showImagesBtn')
 
 showImagesBtn.addEventListener('click', randImage)
 
-async function randImage(){
-    let breed=$('#search').value
-    link='https://dog.ceo/api/breed/'+breed+'/images/random'
+function randImage(){
+    let breed=$('#search').value;
+    link='https://dog.ceo/api/breed/'+breed+'/images/random';
+    let interval = setInterval( async () => {
     let response = await fetch(link);
     let data = await response.json();
     image=$('#dogImage')
@@ -32,6 +33,7 @@ async function randImage(){
       image.src="";
       image.alt="No breed found!!";
       console.log('breed not found');
-    }
-
+      clearInterval(interval);
+      return;
+    }},5000)
 }
