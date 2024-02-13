@@ -1,4 +1,19 @@
 var breeds 
+var interval = setInterval
+
+let showImagesBtn = $('#showImagesBtn')
+let image=$('#dogImage');
+let clearImageBtn =$('#clearImage')
+
+showImagesBtn.addEventListener('click', randImage)
+clearImageBtn.addEventListener('click', clear)
+
+function clear(){
+      clearInterval(interval);
+      image.style.display='None';
+      image.src="";
+      return;
+}
 
 fetch('https://dog.ceo/api/breeds/list/all')
 .then(response=>response.json())
@@ -15,25 +30,25 @@ fetch('https://dog.ceo/api/breeds/list/all')
   console.log(error)
 });
 
-let showImagesBtn = $('#showImagesBtn')
-
-showImagesBtn.addEventListener('click', randImage)
-
-function randImage(){
+async function randImage(){
     let breed=$('#search').value;
-    link='https://dog.ceo/api/breed/'+breed+'/images/random';
-    let interval = setInterval( async () => {
+    link='https://dog.ceo/api/breed/'+breed+'/images';
     let response = await fetch(link);
     let data = await response.json();
-    image=$('#dogImage')
+    if(data.status == 'success'){
+    idx=Math.floor(Math.random()*data.message.length);
     image.style.display='block';
-    if( breeds.includes(breed) ){
-      image.src=data.message;
-    }else{
+    image.src=data.message[idx];
+    interval = setInterval( () => {
+    // if (idx > data.message.length){idx=Math.floor(Math.random()*data.message.length);}
+    image.src=data.message[idx];
+    idx++;
+    },5000)}
+    else{
       image.src="";
-      image.alt="No breed found!!";
-      console.log('breed not found');
+      image.alt="Breed doesn't exist!!";
+      console.log('Invalid Breed');
       clearInterval(interval);
       return;
-    }},5000)
+    }
 }
