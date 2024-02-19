@@ -12,6 +12,7 @@ function clear(){
       clearInterval(interval);
       image.style.display='None';
       image.src="";
+      $('#search').value ="";
       return;
 }
 
